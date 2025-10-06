@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avisos y Términos - Editor</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            color: #4b3f72;
+            letter-spacing: 1px;
+        }
+        .editor-container {
+            max-width: 600px;
+            margin: 40px auto;
+            box-shadow: 0 8px 24px rgba(76, 51, 133, 0.12);
+            border-radius: 16px;
+            background: rgba(255,255,255,0.95);
+            padding: 32px 24px;
+        }
+        .editor-toolbar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+            justify-content: center;
+        }
+        .editor-toolbar button {
+            background: linear-gradient(90deg, #8ec5fc 0%, #e0c3fc 100%);
+            border: none;
+            border-radius: 6px;
+            padding: 8px 16px;
+            font-size: 16px;
+            color: #4b3f72;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(76, 51, 133, 0.08);
+        }
+        .editor-toolbar button:hover {
+            background: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+            box-shadow: 0 4px 16px rgba(76, 51, 133, 0.16);
+        }
+        #editor {
+            min-height: 220px;
+            border: 1.5px solid #8ec5fc;
+            padding: 14px;
+            background: #fff;
+            border-radius: 8px;
+            font-size: 17px;
+            color: #333;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        #editor:focus {
+            border-color: #4b3f72;
+            box-shadow: 0 0 0 2px #e0c3fc55;
+        }
+    </style>
+</head>
+<body>
+    <h1>Avisos y Términos</h1>
+    <div class="editor-container">
+        <div class="editor-toolbar">
+            <button onclick="format('bold')" title="Negrita"><b>Negrita</b></button>
+            <button onclick="format('italic')" title="Cursiva"><i>Cursiva</i></button>
+            <button onclick="format('underline')" title="Subrayado"><u>Subrayado</u></button>
+            <button onclick="format('insertUnorderedList')" title="Lista con viñetas">• Lista</button>
+            <button onclick="format('insertOrderedList')" title="Lista numerada">1. Lista</button>
+        </div>
+        <div id="editor" contenteditable="true">
+            Escribe aquí los avisos y términos...
+        </div>
+    </div>
+    <script>
+        function format(command) {
+            document.execCommand(command, false, null);
+        }
+    </script>
+</body>
+</html>

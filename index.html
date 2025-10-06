@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYYTSA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-content">
+            <div class="logo"><img src="logo.png" alt="fyytsa"></div>
+            <button class="menu-toggle">☰</button>
+            <div class="navbar-links">
+                <input type="text" class="search-bar" placeholder="Buscar..." />
+
+                <!-- Botón de Personalización -->
+                <button class="account-btn" onclick="openCustomization()">🎨 Personalizar</button>
+
+                <div class="account-menu">
+                    <button class="account-btn">Cuenta ▼</button>
+                    <div class="account-dropdown">
+                        <button class="login-btn">Iniciar sesión</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <h1>FYYTSA</h1>
+            <h2>Tu Hogar, Tu Estilo</h2>
+            <h3>Más de 54 años de experiencia con solidez y confianza</h3>
+            <p>Somos una empresa con más de 50 años de experiencia en el mercado Ferretero. Nos dedicamos a comercializar todo tipo de materiales para la industria de la construcción y ferretería.</p>
+            <div class="separator"></div>
+        </div>
+
+        <div class="delivery-animation">
+            <h2>Nuestros Servicios de Entrega</h2>
+            <div class="circle">
+                <img src="paquete.png" alt="Paquete">
+                <img src="camion.png" alt="Camión">
+                <img src="avion.png" alt="Avión">
+                <img src="caja.png" alt="Caja">
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-card">
+                <h3>Calidad Garantizada</h3>
+                <p>Productos de la más alta calidad con garantía incluida en todas nuestras líneas.</p>
+            </div>
+            <div class="info-card">
+                <h3>Envíos Rápidos</h3>
+                <p>Entregamos en todo el país con los mejores tiempos del mercado.</p>
+            </div>
+            <div class="info-card">
+                <h3>Atención Personalizada</h3>
+                <p>Nuestro equipo está siempre disponible para resolver tus dudas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-card">
+        <div class="sidebar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M3 9.5L12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>
+            </svg>
+        </div>
+
+        <div class="sidebar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+        </div>
+
+        <div class="sidebar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M3 7h5l2 3h11v11H3z"/>
+            </svg>
+        </div>
+
+        <div class="sidebar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 
+                         1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 
+                         1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 
+                         1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09c.7 0 
+                         1.31-.4 1.51-1a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 
+                         1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 
+                         0 1-1.51V3a2 2 0 1 1 4 0v.09c0 .7.4 1.31 1 
+                         1.51a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 
+                         1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 
+                         .7.4 1.31 1 1.51.19.08.4.12.61.12H21a2 2 0 1 1 0 4h-.09c-.7 
+                         0-1.31.4-1.51 1z"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 FYYTSA. Todos los derechos reservados.</p>
+        <p>Desarrollado por FYYTSA.</p>
+        <p>Redes Sociales:</p>
+        <p>Facebook | Twitter | Instagram | YouTube</p>
+        <p>
+            <a href="aviso.html">Aviso y términos de privacidad</a>
+        </p>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <input type="text" id="usuario" placeholder="Usuario" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <p id="mensaje"></p>
+        </div>
+    </div>
+  <div id="customizationModal" class="modal">
+    <div class="modal-content customization-modal">
+        <span class="close" onclick="closeCustomization()" aria-label="Cerrar modal de personalización">&times;</span>
+        <h2>🎨 Personalizar Sitio</h2>
+        
+        <div class="customization-section">
+            <h3>🖼️ Imagen Principal</h3>
+            <label for="image1Upload" class="file-label">Selecciona una imagen para el encabezado principal:</label>
+            <input type="file" id="image1Upload" accept="image/*" class="file-input" 
+                   aria-describedby="image1Help">
+            <small id="image1Help" class="help-text">Formatos recomendados: JPG, PNG, WebP. Tamaño máximo: 2MB</small>
+            
+            <div class="preview-container">
+                <p>Vista previa:</p>
+                <img id="image1Preview" class="preview-image" alt="Vista previa de la imagen principal" role="img">
+                <p id="image1PreviewText" class="preview-text" style="display: none;">No hay imagen seleccionada</p>
+            </div>
+            
+            <button class="btn btn-primary" onclick="updateImage1()" id="updateImage1Btn" disabled>
+                <span class="btn-text">Actualizar Imagen Principal</span>
+                <span class="btn-loading" style="display: none;">Procesando...</span>
+            </button>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="customization-section">
+            <h3>📷 Imagen Secundaria</h3>
+            <label for="image2Upload" class="file-label">Selecciona una imagen para la sección de servicios:</label>
+            <input type="file" id="image2Upload" accept="image/*" class="file-input"
+                   aria-describedby="image2Help">
+            <small id="image2Help" class="help-text">Formatos recomendados: JPG, PNG, WebP. Tamaño máximo: 2MB</small>
+            
+            <div class="preview-container">
+                <p>Vista previa:</p>
+                <img id="image2Preview" class="preview-image" alt="Vista previa de la imagen secundaria" role="img">
+                <p id="image2PreviewText" class="preview-text" style="display: none;">No hay imagen seleccionada</p>
+            </div>
+            
+            <button class="btn btn-primary" onclick="updateImage2()" id="updateImage2Btn" disabled>
+                <span class="btn-text">Actualizar Imagen Secundaria</span>
+                <span class="btn-loading" style="display: none;">Procesando...</span>
+            </button>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="reset-section">
+            <button class="btn btn-secondary" onclick="resetCustomization()" id="resetBtn">
+                <span class="btn-text">🔄 Restablecer Originales</span>
+                <span class="btn-loading" style="display: none;">Restableciendo...</span>
+            </button>
+            <small class="help-text">Esta acción eliminará todas las personalizaciones</small>
+        </div>
+    </div>
+</div>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar-links').classList.toggle('active');
+        });
+
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    document.querySelector('.navbar-links').classList.remove('active');
+                }
+            });
+        });
+
+        const loginBtn = document.querySelector(".login-btn");
+        const loginModal = document.getElementById("loginModal");
+        const closeBtn = document.querySelector(".close");
+        const form = document.getElementById("loginForm");
+        const mensaje = document.getElementById("mensaje");
+
+        const usuarios = {
+            "brandon": "123456",
+            "admin": "admin123"
+        };
+
+        loginBtn.addEventListener("click", function() {
+            const customImage1 = localStorage.getItem('customImage1');
+            if (customImage1) {
+                const existingLogo = loginModal.querySelector('.custom-login-logo');
+                if (existingLogo) existingLogo.remove();
+                
+                const loginLogo = document.createElement('img');
+                loginLogo.className = 'custom-login-logo';
+                loginLogo.src = customImage1;
+                loginModal.querySelector('.modal-content').insertBefore(loginLogo, loginModal.querySelector('h2'));
+            }
+            loginModal.style.display = 'block';
+        });
+
+        closeBtn.addEventListener("click", function() {
+            loginModal.style.display = 'none';
+            mensaje.textContent = "";
+        });
+
+        window.addEventListener("click", function(e) {
+            if (e.target == loginModal) {
+                loginModal.style.display = 'none';
+                mensaje.textContent = "";
+            }
+        });
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const usuario = document.getElementById("usuario").value;
+            const password = document.getElementById("password").value;
+
+            if (usuarios[usuario] && usuarios[usuario] === password) {
+                mensaje.style.color = "lightgreen";
+                mensaje.textContent = "✅ Inicio de sesión exitoso";
+                setTimeout(() => {
+                    window.location.href = "dashboard.html";
+                }, 1000);
+            } else {
+                mensaje.style.color = "red";
+                mensaje.textContent = "❌ Usuario o contraseña incorrectos";
+            }
+        });
+function updateImage1() {
+    const fileInput = document.getElementById('image1Upload');
+    const updateBtn = document.getElementById('updateImage1Btn');
+    const file = fileInput.files[0];
+    
+    if (!file) {
+        showMessage('Por favor selecciona una imagen primero', 'error');
+        return;
+    }
+
+    if (file.size > 2 * 1024 * 1024) {
+        showMessage('La imagen es demasiado grande. Máximo 2MB permitido.', 'error');
+        return;
+    }
+
+    updateBtn.disabled = true;
+    updateBtn.classList.add('loading');
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        setTimeout(() => {
+            localStorage.setItem('customImage1', e.target.result);
+            applyCustomizations();
+            showMessage('✅ Imagen principal actualizada correctamente', 'success');
+            
+            updateBtn.disabled = false;
+            updateBtn.classList.remove('loading');
+        }, 1000);
+    }
+    
+    reader.onerror = function() {
+        showMessage('❌ Error al cargar la imagen', 'error');
+        updateBtn.disabled = false;
+        updateBtn.classList.remove('loading');
+    }
+    
+    reader.readAsDataURL(file);
+}
+
+function showMessage(message, type) {
+    alert(message);
+}
+
+document.getElementById('image1Upload').addEventListener('change', function(e) {
+    const updateBtn = document.getElementById('updateImage1Btn');
+    updateBtn.disabled = !e.target.files[0];
+});
+
+document.getElementById('image2Upload').addEventListener('change', function(e) {
+    const updateBtn = document.getElementById('updateImage2Btn');
+    updateBtn.disabled = !e.target.files[0];
+});
+
+function openCustomization() {
+    document.getElementById('customizationModal').style.display = 'block';
+    loadCurrentImages();
+}
+
+function closeCustomization() {
+    document.getElementById('customizationModal').style.display = 'none';
+}
+
+function loadCurrentImages() {
+    const currentImage1 = localStorage.getItem('customImage1');
+    const currentImage2 = localStorage.getItem('customImage2');
+    
+    if (currentImage1) {
+        document.getElementById('image1Preview').src = currentImage1;
+        document.getElementById('image1Preview').style.display = 'block';
+        document.getElementById('image1PreviewText').style.display = 'none';
+    }
+    
+    if (currentImage2) {
+        document.getElementById('image2Preview').src = currentImage2;
+        document.getElementById('image2Preview').style.display = 'block';
+        document.getElementById('image2PreviewText').style.display = 'none';
+    }
+}
+
+document.getElementById('image1Upload').addEventListener('change', function(e) {
+    handleImagePreview(e, 'image1Preview', 'image1PreviewText');
+});
+
+document.getElementById('image2Upload').addEventListener('change', function(e) {
+    handleImagePreview(e, 'image2Preview', 'image2PreviewText');
+});
+
+function handleImagePreview(event, previewId, textId) {
+    const file = event.target.files[0];
+    const preview = document.getElementById(previewId);
+    const previewText = document.getElementById(textId);
+    
+    if (file) {
+        if (!file.type.startsWith('image/')) {
+            showMessage('Por favor selecciona un archivo de imagen válido', 'error');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+            previewText.style.display = 'none';
+        }
+        reader.readAsDataURL(file);
+    } else {
+        preview.style.display = 'none';
+        previewText.style.display = 'block';
+    }
+}
+
+function updateImage1() {
+    const fileInput = document.getElementById('image1Upload');
+    const updateBtn = document.getElementById('updateImage1Btn');
+    const file = fileInput.files[0];
+    
+    if (!file) {
+        showMessage('Por favor selecciona una imagen primero', 'error');
+        return;
+    }
+
+    if (file.size > 2 * 1024 * 1024) {
+        showMessage('La imagen es demasiado grande. Máximo 2MB permitido.', 'error');
+        return;
+    }
+
+    updateBtn.disabled = true;
+    updateBtn.classList.add('loading');
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        setTimeout(() => {
+            localStorage.setItem('customImage1', e.target.result);
+            applyCustomizations();
+            showMessage('✅ Imagen principal actualizada correctamente', 'success');
+            
+            updateBtn.disabled = false;
+            updateBtn.classList.remove('loading');
+            fileInput.value = '';
+        }, 1000);
+    }
+    
+    reader.onerror = function() {
+        showMessage('❌ Error al cargar la imagen', 'error');
+        updateBtn.disabled = false;
+        updateBtn.classList.remove('loading');
+    }
+    
+    reader.readAsDataURL(file);
+}
+
+function updateImage2() {
+    const fileInput = document.getElementById('image2Upload');
+    const updateBtn = document.getElementById('updateImage2Btn');
+    const file = fileInput.files[0];
+    
+    if (!file) {
+        showMessage('Por favor selecciona una imagen primero', 'error');
+        return;
+    }
+
+    if (file.size > 2 * 1024 * 1024) {
+        showMessage('La imagen es demasiado grande. Máximo 2MB permitido.', 'error');
+        return;
+    }
+
+    updateBtn.disabled = true;
+    updateBtn.classList.add('loading');
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        setTimeout(() => {
+            localStorage.setItem('customImage2', e.target.result);
+            applyCustomizations();
+            showMessage('✅ Imagen secundaria actualizada correctamente', 'success');
+            
+            updateBtn.disabled = false;
+            updateBtn.classList.remove('loading');
+            fileInput.value = '';
+        }, 1000);
+    }
+    
+    reader.onerror = function() {
+        showMessage('❌ Error al cargar la imagen', 'error');
+        updateBtn.disabled = false;
+        updateBtn.classList.remove('loading');
+    }
+    
+    reader.readAsDataURL(file);
+}
+
+function applyCustomizations() {
+    const customImage1 = localStorage.getItem('customImage1');
+    if (customImage1) {
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.backgroundImage = `linear-gradient(rgba(58, 44, 90, 0.7), rgba(30, 25, 50, 0.7)), url(${customImage1})`;
+            hero.style.backgroundSize = 'cover';
+            hero.style.backgroundPosition = 'center';
+        }
+    }
+
+    const customImage2 = localStorage.getItem('customImage2');
+    if (customImage2) {
+        const deliverySection = document.querySelector('.delivery-animation');
+        if (deliverySection) {
+            deliverySection.style.backgroundImage = `url(${customImage2})`;
+            deliverySection.style.backgroundSize = 'cover';
+            deliverySection.style.backgroundPosition = 'center';
+        }
+    }
+}
+
+function resetCustomization() {
+    const resetBtn = document.getElementById('resetBtn');
+    resetBtn.classList.add('loading');
+    
+    setTimeout(() => {
+        localStorage.removeItem('customImage1');
+        localStorage.removeItem('customImage2');
+        
+        document.getElementById('image1Preview').style.display = 'none';
+        document.getElementById('image2Preview').style.display = 'none';
+        document.getElementById('image1PreviewText').style.display = 'block';
+        document.getElementById('image2PreviewText').style.display = 'block';
+        
+        document.getElementById('image1Upload').value = '';
+        document.getElementById('image2Upload').value = '';
+        
+        document.getElementById('updateImage1Btn').disabled = true;
+        document.getElementById('updateImage2Btn').disabled = true;
+        
+        const hero = document.querySelector('.hero');
+        const deliverySection = document.querySelector('.delivery-animation');
+        
+        if (hero) hero.style.backgroundImage = '';
+        if (deliverySection) deliverySection.style.backgroundImage = '';
+        
+        showMessage('🔄 Personalización restablecida a valores originales', 'success');
+        resetBtn.classList.remove('loading');
+    }, 1000);
+}
+
+function showMessage(message, type) {
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 20px;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        z-index: 10000;
+        max-width: 300px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        animation: slideIn 0.3s ease;
+    `;
+    
+    if (type === 'success') {
+        notification.style.background = 'linear-gradient(135deg, #00b09b, #96c93d)';
+    } else {
+        notification.style.background = 'linear-gradient(135deg, #ff416c, #ff4b2b)';
+    }
+    
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 3000);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    applyCustomizations();
+});
+
+window.addEventListener('click', function(e) {
+    const customizationModal = document.getElementById('customizationModal');
+    if (e.target == customizationModal) {
+        closeCustomization();
+    }
+});
+
+document.getElementById('image1Upload').addEventListener('change', function(e) {
+    const updateBtn = document.getElementById('updateImage1Btn');
+    updateBtn.disabled = !e.target.files[0];
+});
+
+document.getElementById('image2Upload').addEventListener('change', function(e) {
+    const updateBtn = document.getElementById('updateImage2Btn');
+    updateBtn.disabled = !e.target.files[0];
+});
+    </script>
+</body>
+</html>
